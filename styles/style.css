@@ -52,11 +52,11 @@ ol {
 
 .button {
   cursor: pointer;
-  border: 1px solid #FFF;
+  border: 1px solid #fff;
   font-family: inherit;
   font-size: 18px;
   font-weight: 700;
-  color: #FFF;
+  color: #fff;
   background-color: transparent;
   padding-block: 5px;
 }
@@ -74,13 +74,13 @@ ol {
 }
 
 .button:focus-visible {
-  outline: 1px solid #ffffff;
+  outline: 1px solid #fff;
   outline-offset: 1px;
 }
 
 .content {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 710px 395px;
   align-items: end;
   gap: 30px;
 }
@@ -143,9 +143,9 @@ ol {
 }
 
 .search-form__textfield:active {
-  border: 1px solid #ffffff;
+  border: 1px solid #fff;
   outline: none;
-}
+} 
 
 .search-form__checkbox-list {
   display: flex;
@@ -170,12 +170,12 @@ ol {
   content: '';
   inline-size: 15px;
   block-size: 15px;
-  background-color: #ffffff;
+  background-color: #fff;
   border: none;
 }
 
 .search-form__label:has(:focus-visible)  {
-  outline: 1px solid #FFF;  
+  outline: 1px solid #fff;  
   outline-offset: 2px;
 }
 
@@ -229,7 +229,7 @@ ol {
 .content__card-link {
   margin: 2px;
   display: block;
-  color:  #FFF;
+  color:  #fff;
   text-decoration: none;
 }
 
@@ -246,7 +246,7 @@ ol {
 }
 
 .content__card-link:focus-visible {
-  outline: 1px solid #ffffff;
+  outline: 1px solid #fff;
 }
 
 .content__card-link_current {
