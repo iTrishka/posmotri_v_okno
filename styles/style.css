@@ -9,8 +9,9 @@ html {
 }
 
 .page {
-  display: grid;
+  display: flex;
   align-items: center;
+  justify-content: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -52,15 +53,15 @@ ol {
 .button {
   cursor: pointer;
   border: 1px solid #FFF;
+  font-family: inherit;
   font-size: 18px;
   font-weight: 700;
   color: #FFF;
   background-color: transparent;
-  padding-block: 6px;
+  padding-block: 5px;
 }
 
 .button:hover {
-  cursor: pointer;
   text-decoration: underline;
 }
 
@@ -77,14 +78,14 @@ ol {
   outline-offset: 1px;
 }
 
-/*секция с основным видео*/
 .content {
   display: grid;
-  grid-template-columns: 710px 410px;
+  grid-template-columns: auto auto;
   align-items: end;
   gap: 30px;
 }
 
+/*секция с основным видео*/
 .result__video-container {
   position: relative;
   inline-size: 710px;
@@ -102,16 +103,11 @@ ol {
 /*секция с поиском*/
 .search-form {
   display: flex;
-  grid-template-columns: auto auto auto;
   gap: 40px;
 }
  
 .search-form__fieldset {
   border: none;
-}
-
-.search-form__fieldset:first-child {
-  flex-grow: 1;
 }
 
 .search-form__fieldset-title {
@@ -122,6 +118,7 @@ ol {
 }
 
 .search-form__label {
+  cursor: pointer;
   display: flex;
   flex-flow: row nowrap;
   gap: 5px;
@@ -129,7 +126,7 @@ ol {
 
 .search-form__textfield {
   appearance: none;
-  inline-size: 100%;
+  inline-size: 225px;
   border-block-start: 1px solid #fff;
   border-block-end: 1px solid #fff;
   border-inline-start: transparent;
@@ -150,15 +147,6 @@ ol {
   outline: none;
 }
 
-.search-form__textfield:focus {
-  outline: none;
-}
-
-.search-form__label:has(.search-form__textfield):focus-visible  {
-  outline: 1px solid #ffffff;
-  outline-offset: 1px;
-}
-
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
@@ -175,7 +163,6 @@ ol {
 }
 
 .search-form__label:has(.search-form__checkbox):hover {
-  cursor: pointer;
   border-bottom: 1px solid #fff;
 }
 
@@ -187,10 +174,6 @@ ol {
   border: none;
 }
 
-.search-form__label:has(:focus)  {
-  outline: none;
-}
-
 .search-form__label:has(:focus-visible)  {
   outline: 1px solid #FFF;  
   outline-offset: 2px;
@@ -199,22 +182,16 @@ ol {
 .search-form__submit-button {
   inline-size: 194px;
   align-self: end;
-  font-family: inherit;
 }
 
 /*секция с заголовком*/
-.content__details{
-  display: flex;
-  flex-direction: column;
-  gap: 26px;
-}
-
 .title {
   font-family: Oswald, sans-serif;
   font-size: 75px;
   font-weight: 700;
-  line-height: 94%;
-  text-transform: uppercase; 
+  line-height: 0.93;
+  text-transform: uppercase;
+  padding-block-end: 20px;
 }
 
 .content__accent {
@@ -227,24 +204,10 @@ ol {
   position: relative;
   block-size: 298px;
   overflow: auto;
-  padding-top: 2px
-}
-
-.content__list::-webkit-scrollbar {
-  inline-size: 10px;
-  block-size: 10px;
-}
-
-.content__list::-webkit-scrollbar-thumb {
-  background: rgba(84, 80, 80, 0.9);
-}
-
-.content__list::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.2);
 }
 
 .content__list-item:not(:last-child){
-  padding-block-end: 30px;
+  padding-block-end: 27px;
 }
 
 .content__video-card {
@@ -253,45 +216,37 @@ ol {
   justify-content: space-between;
 }
 
-.content__video-card:hover {
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-.content__video-card:active {
-  background-color: #545050;
-}
-
-.content__video-card:active {
-  background-color: #545050;
-}
-
-.content__video-card:focus {
-  outline: none;
-}
-
-.content__video-card:focus-visible {
-  outline: 1px solid #ffffff;
-}
-
-.content__video-card-description-container {
-  flex-grow: 1;
-}
-
 .content__video-card-title {
   font-family: Oswald, sans-serif;
   font-size: 30px;
   font-weight: 700;
+  line-height: 1; 
   text-transform: uppercase;
-  padding-block-end: 6px;
+  padding-block-end: 3px;
   word-break: break-all;
 }
 
 .content__card-link {
-  margin: 2px 4px;
+  margin: 2px;
   display: block;
   color:  #FFF;
   text-decoration: none;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+}
+
+.content__card-link:active {
+  background-color: #545050;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #ffffff;
 }
 
 .content__card-link_current {
@@ -301,7 +256,9 @@ ol {
 .content__video-card-thumbnail {
   flex-shrink: 0;
   inline-size: 194px;
+  block-size: 103px;
   object-fit: cover;
+  object-position: center;
 }
 
 .more-button {
