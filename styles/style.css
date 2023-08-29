@@ -80,16 +80,20 @@ ol {
 
 .content {
   display: grid;
-  grid-template-columns: 710px 395px;
+  grid-template-columns: auto auto;
   align-items: end;
   gap: 30px;
 }
 
 /*секция с основным видео*/
+.result {
+  inline-size: 710px;
+}
+
 .result__video-container {
   position: relative;
   inline-size: 710px;
-  block-size: 385px;
+  block-size: 386px;
   margin-block-end: 16px;
 }
 
@@ -199,18 +203,23 @@ ol {
 }
 
 /*секция со списком видео*/
+.content__details {
+  inline-size: 400px;
+}
 
 .content__list {
   position: relative;
   block-size: 298px;
   overflow: auto;
+  margin-inline-start: -2px;
 }
 
 .content__list-item:not(:last-child){
-  padding-block-end: 27px;
+  padding-block-end: 26px;
 }
 
 .content__video-card {
+  inline-size: 399px;
   padding: 2px;
   display: flex;
   justify-content: space-between;
@@ -262,6 +271,6 @@ ol {
 }
 
 .more-button {
-  inline-size: 100%;
+  inline-size: 399px;
 }
 
